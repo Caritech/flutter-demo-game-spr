@@ -1,16 +1,31 @@
-# boilerplate
+# Flutter scissor-rock-paper
 
-A new Flutter project.
+For Demostrate usage of GetX on handling state
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+try this project
 
-A few resources to get you started if this is your first Flutter project:
+`git clone https://github.com/Caritech/flutter-demo-game-spr.git`
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Explanation  of Project
+
+State Management Package: https://pub.dev/packages/get
+
+In flutter, `main.dart` is the first loaded first
+
+`lib/functions/global.dart` is used to store global function
+
+`lib/controllers/controller.dart` is used to handle the state and logic of entire application
+
+* in real world application state and logic management should separate to different files for ease in maintain.
+
+### `pages` Directory is used to store all the pages.
+- use `Get.to(YourPageName())` to move to other page.
+- `pages/splash.dart` is a splashscreen, use as a smooth transition to app
+- `pages/login.dart` a page required an user input, which will pass to `GamePage` through GetX
+- `pages/game.dart` a page use to demonstrate the GetX state management
+
+
+
