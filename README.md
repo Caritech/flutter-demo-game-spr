@@ -8,12 +8,25 @@ try this project
 
 `git clone https://github.com/Caritech/flutter-demo-game-spr.git`
 
+---
+
+## Please be Remind
+
+Flutter has multiple way to handle the state, different state management got different directory structures.
+
+The directory strucutre show in this project is just for demonstration purpose only.
+
+However, You can use this structure for small project.
+
+---
 
 ## Explanation  of Project
 
 State Management Package: https://pub.dev/packages/get
 
-In flutter, `main.dart` is the first loaded first
+In flutter, 
+
+`main.dart` is the first loaded first
 
 `lib/functions/global.dart` is used to store global function
 
