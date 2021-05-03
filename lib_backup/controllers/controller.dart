@@ -4,7 +4,7 @@ import '../functions/global.dart';
 
 class Controller extends GetxController {
   var username;
-  var oppositeUsername;
+  var oppositeUsername; //get from firebase
 
   String gameOwnInput = '';
   String gameEnemyInput = '';
@@ -19,7 +19,16 @@ class Controller extends GetxController {
   }
 
   login() {
-    Get.to(() => GamePage());
+    //TODO get firebase username
+    if (username != '' && username != null) {
+      Get.to(() => GamePage());
+    } else {
+      alert('Username is required');
+    }
+  }
+
+  getGameResult() {
+    //TODO get firebase data
   }
 
   String getEnemyName() {
@@ -53,9 +62,6 @@ class Controller extends GetxController {
     update();
   }
 
-  /*
-    GAME LOGIC
-  */
   checkGameResult() {
     String o = gameOwnInput; //own
     String e = gameEnemyInput; //enemy
@@ -95,9 +101,6 @@ class Controller extends GetxController {
     return gameResult;
   }
 
-  /*
-    Reset All Value to empty
-  */
   nextGame() {
     gameOwnInput = '';
     gameEnemyInput = '';

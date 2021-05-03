@@ -9,27 +9,9 @@ class LoginPage extends StatelessWidget {
     Controller controller = Get.put(Controller()); // controller
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Rock Paper Scissor'),
-      ),
       body: Container(
-        child: Column(
-          children: [
-            TextField(
-              onChanged: controller.usernameChanged,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter your username'),
-            ),
-            GetBuilder<Controller>(
-              builder: (_) => Text('Entered: ${controller.username}'),
-            ),
-            ElevatedButton(
-              onPressed: controller.login,
-              child: Text('Ready for Battle'),
-            )
-          ],
-        ),
+        padding: EdgeInsets.all(50),
+        child: Text('This is Login Page'),
       ),
     );
   }
