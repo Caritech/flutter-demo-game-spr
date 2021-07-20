@@ -116,7 +116,7 @@ class GamePage extends StatelessWidget {
     );
   }
 
-  Widget _userInput(String index) {
+  _userInput(String index) {
     Controller controller = Get.put(Controller()); // controller
     return Container(
       margin: EdgeInsets.fromLTRB(15, 45, 15, 30),
